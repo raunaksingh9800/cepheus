@@ -1,18 +1,16 @@
 
 import ColourfulText from "@/components/ui/colourful-text";
 import {ImageC , ImageH}  from "@/components/Image/image";
+import DevfolioBtn from "@/components/applyDevFolio/btn";
+
+
+
 
 export default function Home() {
   return (
     <div className="w-screen h-screen flex flex-col justify-center items-center text-3xl">
-      <div className="mt-5 mr-5 absolute top-0 right-0 bg-[#3770FF] flex flex-row justify-center items-center gap-2 p-2 rounded-md">
-        <div className=" text-white text-sm font-semibold">Apply with </div>
-        <ImageC             
-        src="/DEV.png"
-            alt="DEVFOLIO LOGO"
-            width={70}
-            height={35}
-          />
+      <div className="mt-5 mr-5 absolute top-0 right-0  justify-center items-center gap-2 p-2 rounded-md">
+        <DevfolioBtn />
       </div>
       <div className="w-fit h-fit flex flex-row justify-center items-center text-3xl">
         <div className=" opacity-45 font-medium">Coming Soon</div>
