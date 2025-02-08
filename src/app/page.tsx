@@ -1,6 +1,6 @@
 
 import ColourfulText from "@/components/ui/colourful-text";
-import {ImageC , ImageH}  from "@/components/Image/image";
+import { ImageH}  from "@/components/Image/image";
 import DevfolioBtn from "@/components/applyDevFolio/btn";
 
 
