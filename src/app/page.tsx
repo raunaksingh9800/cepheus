@@ -56,7 +56,7 @@ export default function Home() {
               width={80}
               height={40}
               className="md:w-[100px] md:h-[50px]"
-              herf="https://devfolio.co"
+              href="https://devfolio.co"
               />
               <ImageH
               src="/Polygon_Logo-White.svg"
@@ -64,7 +64,7 @@ export default function Home() {
               width={80}
               height={40}
               className="md:w-[100px] md:h-[50px]"
-              herf="https://polygon.technology/"
+              href="https://polygon.technology/"
               />
               <ImageH
               src="/ethindia-light.svg"
@@ -72,7 +72,7 @@ export default function Home() {
               width={80}
               height={40}
               className="md:w-[100px] md:h-[50px]"
-              herf="https://ethindia.co"
+              href="https://ethindia.co"
               />
             </div>
           </div>
