@@ -42,7 +42,7 @@ export default function RootLayout({
   <link rel="manifest" href="/site.webmanifest" />
 </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black overflow-x-hidden overflow-y-hidden`}
       >
         {children}
         <script defer async src="https://apply.devfolio.co/v2/sdk.js"></script>

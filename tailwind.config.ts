@@ -57,6 +57,7 @@ export default {
   			sm: 'calc(var(--radius) - 4px)'
   		},
 		  animation: {
+			gradient: 'gradient 3s ease infinite',
 			 shimmer: "shimmer 2s linear infinite",
 			first: "moveVertical 30s ease infinite",
 			second: "moveInCircle 20s reverse infinite",
@@ -65,6 +66,14 @@ export default {
 			fifth: "moveInCircle 20s ease infinite",
 		  },
 		  keyframes: {
+			gradient: {
+          '0%, 100%': {
+            backgroundPosition: '0% 50%',
+          },
+          '50%': {
+            backgroundPosition: '100% 50%',
+          },
+		},
 			shimmer: {
 				from: {
 				  "backgroundPosition": "0 0"
