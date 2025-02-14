@@ -59,14 +59,6 @@ export default function Home() {
               href="https://devfolio.co"
               />
               <ImageH
-              src="/Polygon_Logo-White.svg"
-              alt="POLYGON LOGO"
-              width={80}
-              height={40}
-              className="md:w-[100px] md:h-[50px]"
-              href="https://polygon.technology/"
-              />
-              <ImageH
               src="/ethindia-light.svg"
               alt="ETHINDIA LOGO"
               width={80}
