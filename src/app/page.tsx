@@ -15,17 +15,17 @@ export default function Home() {
       <div className="w-screen h-screen overflow-x-hidden overflow-y-hidden">
         <BackgroundGradientAnimation></BackgroundGradientAnimation>
         <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center">
-          <nav className=" absolute top-4 md:top-4 lg:top-4 w-[85vw] md:w-[70vw] lg:w-[60vw] h-14 backdrop:blur-xs rounded-3xl md:rounded-3xl px-4 py-2 border-solid border-white/5 border-[2px]  bg-white/5 flex flex-row justify-between items-center">
+          <nav className="absolute top-4 md:top-4 lg:top-4 w-[85vw] md:w-[70vw] lg:w-[60vw] h-14  rounded-3xl md:rounded-3xl px-4 py-2 border-solid border-white/5 border-[2px]  bg-white/5 flex flex-row justify-between items-center">
             <div id="leftSec" className="text-white/80 text-base md:text-lg font-medium" >
               Welcome <b>Hacker</b>
               </div>
-            <div id="rightSec" className="md:relative md:right-[auto]  text-xs opacity-70 text-white flex flex-row gap-2 md:gap-4">
+            <div id="rightSec" className=" text-white/70">
             <Menu />
             </div>
           </nav>
 
           <div className="w-auto h-auto   flex flex-col text-white items-center justify-center">
-            <p className=" text-[0.68rem] md:text-sm mb-1 opacity-60">
+            <p className=" text-[0.68rem] md:text-sm mb-1 text-white/50 ">
               GDG · On Campus Atria IT x MCA Dept Presents
             </p>
             <h1 className="text-7xl md:text-9xl font-bold bg-gradient-to-r from-white via-yellow-100 to-gray-400 bg-clip-text text-transparent animate-gradient">
