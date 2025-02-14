@@ -37,11 +37,13 @@ export default function Home() {
 
             </div>
 
-            <button className="mt-6 px-6 py-2 border-solid border-[1px] bg-white text-black border-white rounded-3xl font-medium">
+            <a href="https://cepheus.devfolio.co" className="mt-6 px-6 py-2 border-solid border-[1px] bg-white text-black border-white rounded-3xl font-medium">
               Register Now!
               
-            </button>
+            </a>
+            
             <div className=" absolute top-0 -z-40 opacity-0"><DevfolioBtn /></div>
+            
             <p className=" text-xs underline mt-2 font-medium opacity-40">Know More</p>
             
           </div>
