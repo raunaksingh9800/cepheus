@@ -1,22 +1,16 @@
 "use client";
 
-
 import { useRouter } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
-import { ImageC } from "../Image/image";
+
+import { ClipLoader } from "react-spinners";
+import { XIcon } from "lucide-react";
 
 
-const ComponentLoading = () => {
-    return (
-        <div className="flex flex-row justify-center items-center gap-2">
-            Almost There
-            <ImageC src="/LOADING.gif" width={25} height={12} alt="Loading gif" />
-        </div>
-    );
-};
 
 function Rbtn() {
     const [s, ss] = useState<boolean>(false);
+    const [showCloseIcon, setShowCloseIcon] = useState<boolean>(false);
     const r = useRouter();
     const gradientRef = useRef<HTMLDivElement>(null);
 
@@ -32,11 +26,19 @@ function Rbtn() {
         };
         animateGradient();
     }, []);
+
     const handler = () => {
         ss(!s);
+        setShowCloseIcon(false);
         setTimeout(() => {
-            r.push("https://cepheus.devfolio.co"); // Redirect after 2 seconds
-        }, 2000); 
+            setShowCloseIcon(true);
+        }, 2000); // Show close icon after 5 seconds
+
+        setTimeout(() => {
+            ss(!s);
+            // Redirect after 2 seconds
+            r.push("https://cepheus.devfolio.co");
+        }, 1000);
     };
 
     return (
@@ -51,12 +53,20 @@ function Rbtn() {
                     <div className="gradient-border " ref={gradientRef}></div>
                 </div>
                 <div className="fixed top-0 right-0 w-screen h-screen z-50 flex flex-col justify-center items-start  text-5xl  lg:text-8xl px-10 md:px-20 lg:px-40 opacity-60 font-bold">
-                    <p className=  "text-xs md:text-base tracking-[15px] md:tracking-[30px] font-bold my-6 flex flex-row justify-center items-center text-white"> LOADING<ImageC src="/LOADING.gif" height={32.5/2} width={32.5} alt="SVG" />
-                    </p>
+                    {showCloseIcon && (
+                        <button className="absolute top-8 right-12" onClick={() => { ss(!s); setShowCloseIcon(false); }}>
+                            <XIcon />
+                        </button>
+                    )}
+                    <div className=" mb-4">
+                    <ClipLoader speedMultiplier={0.7} cssOverride={{ borderWidth: "5px" }} color="white" />
+                    </div>
+
                     <p>Your</p>
                     <div className="w-[90%] h-1 md:h-2 bg-white/70 rounded-full my-6 md:my-8"></div>
-                    <p className="my-4">code could </p>
-                    <p className="my-4">change the world.</p>
+                    <p className=" my-3 md:my-4">code could </p>
+                    <p className="my-3 md:my-4">change the world.</p>
+
                 </div>
             </div>
 
@@ -64,7 +74,7 @@ function Rbtn() {
                 onClick={handler}
                 className="mt-6 px-6 py-2 border-solid border-[1px] bg-white text-black border-white rounded-3xl font-medium flex flex-row"
             >
-                {s ? <ComponentLoading /> : "Register Now!"}
+                {"Register Now!"}
             </button>
         </div>
     );
