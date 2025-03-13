@@ -19,7 +19,7 @@ const Footer = () => {
           </p>
           <ul>
             <li className="flex items-center mb-2">
-              <Gift className="mr-2" /> Cash Prizes: Up to ₹25K+
+              <Gift className="mr-2" /> Cash Pool: Up to ₹25K+
             </li>
             <li className="flex items-center mb-2">
               <Award className="mr-2" /> Internship Opportunities
@@ -35,7 +35,7 @@ const Footer = () => {
           <h2 className="text-white text-lg md:text-xl mb-4">📅 Event Details</h2>
 <div className="text-xs md:text-base">          <ul>
             <li className="flex items-center mb-2">
-              <Calendar className="mr-2" /> Date: 7th - 8th March 2025
+              <Calendar className="mr-2" /> Date: Apr 2 - 3, 2025
             </li>
             <li className="flex items-center mb-2">
               <MapPin className="mr-2" /> Atria Institute of Technology, Bangalore

@@ -96,7 +96,7 @@ export default function Home() {
         </div>
         <div className=" text-black/60 text-lg md:text-center mx-6 md:mx-32 mt-8 md:mt-12">
           Join us in supporting the future of innovation at the Cepheus
-          Hackathon on March 7-8, 2025! This 24- hour coding marathon brings
+          Hackathon on Apr 2 - 3, 2025!. This 24- hour coding marathon brings
           together talented developers, designers, and problem-solvers to tackle
           cutting-edge challenges and create groundbreaking solutions. As a
           sponsor, you&apos;ll have the opportunity to engage with top tech talent,
@@ -106,7 +106,7 @@ export default function Home() {
         </div>
         <div className=" flex flex-col md:flex-row gap-6 md:gap-12 mt-10 md:mt-12 mx-6 md:mx-0 text-base font-semibold text-purple-900 mb-12 md:mb-24 ">
           <div className=" flex flex-row gap-3">
-            <CalendarCheck /> 10th March 2025
+            <CalendarCheck /> Apr 2 - 3, 2025
           </div>
           <div className=" flex flex-row gap-3">
             <MapPin />{" "}
