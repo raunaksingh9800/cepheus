@@ -8,14 +8,14 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-black text-gray-400 py-8 px-4">
+    <footer className="bg-[#0a0a0a] text-gray-400 py-8 px-6">
       <div className="container mx-auto flex flex-col md:flex-row justify-between gap-8 md:gap-14 ">
         
         {/* Event Info */}
         <div>
           <h2 className="text-white text-lg md:text-xl mb-4">🚀 CEPHEUS 2025</h2>
           <div className="text-xs md:text-base"><p className="mb-2">
-            Google Developer Groups Atria IT X Department of MCA presents <br /> CEPHEUS 2025, where innovation meets impact!
+            Google Developer Groups Atria IT X Code Club <br /> CEPHEUS 2025, where innovation meets impact!
           </p>
           <ul>
             <li className="flex items-center mb-2">
@@ -35,14 +35,12 @@ const Footer = () => {
           <h2 className="text-white text-lg md:text-xl mb-4">📅 Event Details</h2>
 <div className="text-xs md:text-base">          <ul>
             <li className="flex items-center mb-2">
-              <Calendar className="mr-2" /> Date: Apr 2 - 3, 2025
+              <Calendar className="mr-2" /> Date: Apr 10 - 11, 2025
             </li>
             <li className="flex items-center mb-2">
               <MapPin className="mr-2" /> Atria Institute of Technology, Bangalore
             </li>
-            <li className="flex items-center mb-2">
-              <Gift className="mr-2" /> Entry Fee: ₹600 per team (Min. 2, Max. 4 members)
-            </li>
+
           </ul>
 </div>
         </div>

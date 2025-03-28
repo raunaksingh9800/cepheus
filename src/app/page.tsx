@@ -7,12 +7,12 @@ import Menu from "@/components/navMob/Menu";
 
 import { FlipWords } from "@/components/ui/flip-words";
 import Rbtn from "@/components/registerBtn/btn";
-import {
-  CalendarCheck,
-  MapPin,
-  User2,
-} from "lucide-react";
-// import { TimelineDemo } from "@/components/timeline/tl";
+import { GlowingEffectDemoSecond } from "@/components/problemStatement/ps";
+import Countdown from "@/components/counter/Counter";
+
+import {HackathonFAQ} from "@/components/faqs/faqs"
+
+
 import Footer from "@/components/footer/footer";
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
 
           <div className="w-auto h-auto   flex flex-col text-white items-center justify-center">
             <p className=" text-[0.68rem] md:text-sm mb-1 text-white/50 ">
-              GDG · On Campus Atria IT x MCA Dept Presents
+              GDG · On Campus Atria IT x Code Club Presents
             </p>
             <h1 className="text-7xl md:text-9xl font-bold bg-gradient-to-r from-white via-yellow-100 to-gray-400 bg-clip-text text-transparent animate-gradient">
               Cepheus
@@ -87,60 +87,26 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div
-        id="aboutus"
-        className="w-screen h-auto border-solid border-black/10 border-2 overflow-x-hidden overflow-y-hidden bg-white flex flex-col  md:items-center"
-      >
-        <div className=" text-purple-900 text-3xl md:text-5xl font-semibold mt-16 md:mt-24 flex flex-row text-center w-screen items-center  justify-center">
-          About Us
-        </div>
-        <div className=" text-black/60 text-lg md:text-center mx-6 md:mx-32 mt-8 md:mt-12">
-          Join us in supporting the future of innovation at the Cepheus
-          Hackathon on Apr 2 - 3, 2025!. This 24- hour coding marathon brings
-          together talented developers, designers, and problem-solvers to tackle
-          cutting-edge challenges and create groundbreaking solutions. As a
-          sponsor, you&apos;ll have the opportunity to engage with top tech talent,
-          showcase your brand, and contribute to the advancement of technology.
-          Be a part of this dynamic event where creativity meets collaboration,
-          and help shape the next wave of innovation!.
-        </div>
-        <div className=" flex flex-col md:flex-row gap-6 md:gap-12 mt-10 md:mt-12 mx-6 md:mx-0 text-base font-semibold text-purple-900 mb-12 md:mb-24 ">
-          <div className=" flex flex-row gap-3">
-            <CalendarCheck /> Apr 2 - 3, 2025
-          </div>
-          <div className=" flex flex-row gap-3">
-            <MapPin />{" "}
-            <a href="https://g.co/kgs/a7mjqRS">Atria Institute of Technology</a>
-          </div>
-          <div className=" flex flex-row gap-3">
-            <User2 /> 150+{" "}
-          </div>
-        </div>
-      </div>
-      <div
-        id="contactus"
-        className="w-screen h-auto border-solid border-black/10 border-2 overflow-x-hidden overflow-y-hidden bg-white flex flex-col  md:items-center"
-      >
-        <div className=" text-purple-900 text-3xl md:text-5xl font-semibold mt-16 md:mt-24 flex flex-row text-center w-screen items-center  justify-center">
-          Contact Us
-        </div>
-        <div className=" text-black/60 text-lg md:text-center mx-6 md:mx-32 mt-8 md:mt-12 mb-24">
 
-📞 For Queries: <br />
-📌 Sadiya: <b>8904287931</b>  <br />
-📌 Harshit: <b>6207656024</b> <br />
-📌 Sulaiman: <b>8792345338</b> <br />
-📌 Indrajit: <b>7899818522</b> <br />
-<br /> 
-⚡ Innovate. Compete. Win. See you at CEPHEUS 2025! 🚀
+      <section id="counter" className="w-screen h-auto  py-16 flex -mt-[5vh]  md:-mt-[10vh] flex-col items-center justify-center text-white bg-gradient-to-b from-transparent via-[#000000] via-30% to-black">
+      <div className=" pt-7">
+      <Countdown targetDate="2025-04-10T23:59:59" />
         </div>
-
-      </div>
-      {/* <div id="" className="w-screen h-auto  ">
-        <TimelineDemo />
-      </div> */}
-
-      <footer className="w-screen h-[30vh] bg-black">
+    </section>
+    <div className="w-screen h-[2px] bg-[#656565]"></div>
+    
+    <section id="problemstatement" className="w-screen h-auto px-6  flex   flex-col items-center justify-center  ">
+    <h1 className=" text-white  pt-12 text-2xl  md:text-4xl font-semibold">📝 Problem Statements</h1>
+    <h3 className="text-[#8f8f8f] text-sm pt-4 pb-12 font-medium">Click on the card to know more</h3>
+    <GlowingEffectDemoSecond />
+    </section>
+        
+    <section id="FAQs" className="w-screen h-auto  flex px-6 md:px-48 lg:px-64  flex-col items-center justify-center  text-white">
+    <h1 className=" text-white  py-12 text-2xl  md:text-4xl font-semibold">🙋 FAQs</h1>
+    
+      <HackathonFAQ />
+    </section>
+      <footer id="aboutus" className=" mt-8">
         <Footer />
       </footer>
     </main>

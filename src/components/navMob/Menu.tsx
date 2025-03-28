@@ -29,7 +29,8 @@ export default function Menu() {
         rounded-3xl md:bg-transparent
         flex-col md:text-xs gap-4 px-6 py-4 md:p-2`}>
       <a href="#aboutus">About Us</a>
-      <a href="#contactus">Contact Us</a>
+      <a href="#problemstatement">Statements</a>
+      <a href="#FAQs">FAQs</a>
       {/* <a href="">Sponsors</a> */}
     </div>
     </div>

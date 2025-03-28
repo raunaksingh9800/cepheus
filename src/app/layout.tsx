@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Cepheus · Hackathon",
   description: `Join us in supporting the future of innovation at the
-Cepheus Hackathon on Apr 2 - 3, 2025! This 24-
+Cepheus Hackathon on Apr 10 - 11, 2025! This 24-
 hour coding marathon brings together talented
 developers, designers, and problem-solvers to
 tackle cutting-edge challenges and create
