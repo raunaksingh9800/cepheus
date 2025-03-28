@@ -1,6 +1,6 @@
 # 🚀 Cepheus 2025 Hackathon
 
-![Cepheus 2025](https://your-image-link-here.com/banner.jpg)
+![Cepheus 2025](https://cepheus.devfolio.co/_next/image?url=https%3A%2F%2Fassets.devfolio.co%2Fhackathons%2F396291ccbd6e4e2d83254e2597e0e083%2Fassets%2Fcover%2F765.jpeg&w=360&q=100)
 
 ## 🌌 Code the Stars, Create the Future!
 
