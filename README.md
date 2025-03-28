@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Cepheus 2025 Hackathon
 
-## Getting Started
+![Cepheus 2025](https://your-image-link-here.com/banner.jpg)
 
-First, run the development server:
+## 🌌 Code the Stars, Create the Future!
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Welcome to **Cepheus 2025**, a **24-hour Hackathon** where innovation, creativity, and collaboration take center stage! This hackathon is a beacon for developers, designers, and problem-solvers looking to push the boundaries of technology and create groundbreaking solutions.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📅 Event Details
+- **Date:** April 10-11, 2025
+- **Location:** AIT Campus
+- **Hosted by:** GDG on Campus AIT & Code Club
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Cepheus provides a platform to **innovate, learn, and connect** with industry leaders, mentors, and fellow tech enthusiasts. Whether you're a seasoned hacker or a first-time participant, this is your chance to **turn ideas into reality!**
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 💡 Why Join Cepheus Hackathon?
+✅ **Code & Innovate** – Tackle real-world challenges with cutting-edge tech.  
+✅ **Network with Experts** – Interact with industry mentors, sponsors, and like-minded innovators.  
+✅ **Showcase Your Talent** – Compete for exciting prizes and recognition.  
+✅ **Exclusive Sponsor Sessions** – Learn from tech giants and industry pioneers.  
+✅ **Internship Opportunities** – Stand a chance to gain valuable internships.  
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📍 Roadmap to Cepheus Hackathon 2025 🚀
+🔹 **February 10th, 2025** – Registrations Open 🎉  
+🔹 **March 30th, 2025** – Announcement of Selected Teams begins 📢  
+🔹 **April 4th, 2025** – Registrations Close ⏳  
+🔹 **April 10th & 11th, 2025** – The Ultimate Hackathon Experience Begins! 💻🔥  
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎯 Themes & Problem Statements
+At Cepheus Hackathon 2025, we aim to **drive innovation** by tackling some of the most pressing challenges in society. Participants will work on real-world problems across various domains, crafting **scalable and impactful solutions**.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🤖 AI & Education (Sponsor Track)
+**Problem:** Revolutionizing Student Education with AI-Generated Video Content  
+✅ **Objective:** Develop an AI-driven solution that generates engaging, high-quality educational video content, providing personalized learning experiences.
+
+> *Note: Those who select the Sponsor problem statement will be eligible for a potential internship and an additional prize.*
+
+### 🌐 India Stack
+**Problem:** Leveraging India's Digital Transformation for Inclusive Innovation  
+✅ **Objective:** Develop solutions leveraging India Stack (Aadhaar, eKYC, UPI, DigiLocker, ONDC, etc.) to address real-world challenges and enhance digital transformation.
+
+### 🌍 Healthcare for All
+**Problem:** Lack of Access to Healthcare in Underserved Communities  
+✅ **Objective:** Develop tech-driven solutions to improve healthcare access in remote areas. Solutions should align with **UN SDG 3: Good Health and Well-being**.
+
+### 🌾 AgriTech & Sustainability
+**Problem:** AI Solutions for Smallholder Farmers  
+✅ **Objective:** Design an AI-based system that assists farmers with real-time crop monitoring, pest detection, and resource optimization.
+
+### 🌍 Open Innovation (Wildcard Track)
+**Problem:** Have a unique, groundbreaking idea?  
+✅ **Objective:** Solve a pressing issue of your choice using technology and innovation.
+
+---
+
+## 🏆 What’s in it for You?
+🏅 **Exciting Prizes & Swag** – Compete for top-tier rewards and exclusive goodies.  
+📢 **Pitch Your Idea** – Present your project to a panel of esteemed judges.  
+🤝 **Networking Opportunities** – Meet developers, designers, and industry leaders.  
+🛠 **Tech Stack Support** – Get mentorship and hands-on support for your project.  
+
+---
+
+## 🎯 Who Can Participate?
+🔹 **College Students (UG & PG)**  
+🔹 **Developers, Designers & Innovators**  
+🔹 **Anyone passionate about building tech-driven solutions**  
+
+No matter your experience level, **Cepheus Hackathon is the place to learn, innovate, and grow!** 🚀
+
+---
+
+
+## ⭐ Contribute
+If you're interested in contributing to the **Cepheus Hackathon website**, feel free to fork the repository, make changes, and submit a pull request. Your contributions are highly valued!
+
+**Let's build the future together!** 🚀
+
