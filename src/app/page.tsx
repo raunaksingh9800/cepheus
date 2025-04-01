@@ -7,13 +7,14 @@ import Menu from "@/components/navMob/Menu";
 
 import { FlipWords } from "@/components/ui/flip-words";
 import Rbtn from "@/components/registerBtn/btn";
-import { GlowingEffectDemoSecond } from "@/components/problemStatement/ps";
+import { ProblemState } from "@/components/problemStatement/ps";
 import Countdown from "@/components/counter/Counter";
 
 import {HackathonFAQ} from "@/components/faqs/faqs"
 
 
 import Footer from "@/components/footer/footer";
+import MDXRenderer from "@/components/MDX/mdx_preview";
 
 export default function Home() {
   const words = [
@@ -25,7 +26,7 @@ export default function Home() {
     <main>
       <div className="w-screen h-screen overflow-x-hidden overflow-y-hidden">
         <BackgroundGradientAnimation></BackgroundGradientAnimation>
-        <div className="w-full h-full absolute top-0 flex flex-col justify-center items-center">
+        <div className="w-full h-screen absolute top-0 flex flex-col justify-center items-center">
           <nav className="absolute top-4 md:top-4 lg:top-4 w-[85vw] md:w-[70vw] lg:w-[60vw] h-14  rounded-3xl md:rounded-3xl px-4 py-2 border-solid border-white/5 border-[2px]  bg-white/5 flex flex-row justify-between items-center">
             <div
               id="leftSec"
@@ -85,23 +86,26 @@ export default function Home() {
               />
             </div>
           </div>
+
+
         </div>
+
+
+
       </div>
 
-      <section id="counter" className="w-screen h-auto  py-16 flex -mt-[5vh]  md:-mt-[10vh] flex-col items-center justify-center text-white bg-gradient-to-b from-transparent via-[#000000] via-30% to-black">
-      <div className=" pt-7">
+      <section id="counter" className="w-screen h-auto py-8 flex  flex-col items-center justify-center text-black bg-[linear-gradient(180deg,var(--gradient-background-start),var(--gradient-background-end))]">
+      <div className="">
       <Countdown targetDate="2025-04-10T23:59:59" />
         </div>
     </section>
-    <div className="w-screen h-[2px] bg-[#656565]"></div>
+    {/* <div className="w-screen h-[2px] bg-[#e0e0e0]"></div> */}
     
-    <section id="problemstatement" className="w-screen h-auto px-6  flex   flex-col items-center justify-center  ">
-    <h1 className=" text-white  pt-12 text-2xl  md:text-4xl font-semibold">📝 Problem Statements</h1>
-    <h3 className="text-[#8f8f8f] text-sm pt-4 pb-12 font-medium">Click on the card to know more</h3>
-    <GlowingEffectDemoSecond />
-    </section>
+    <div id="s" className="w-screen h-auto  flex px-6 md:px-20 lg:px-40 flex-col items-center justify-center  text-white">
+      <ProblemState ></ProblemState>
+    </div>
         
-    <section id="FAQs" className="w-screen h-auto  flex px-6 md:px-48 lg:px-64  flex-col items-center justify-center  text-white">
+    <section id="FAQs" className="w-screen h-auto  flex px-6 md:px-20 lg:px-40 flex-col items-center justify-center  text-white">
     <h1 className=" text-white  py-12 text-2xl  md:text-4xl font-semibold">🙋 FAQs</h1>
     
       <HackathonFAQ />
