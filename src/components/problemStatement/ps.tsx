@@ -1,311 +1,12 @@
-"use client";
 
-import { useState } from "react";
-import { BrainCircuit, Lock, Search, Settings, Sparkles } from "lucide-react";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
-import { Button } from "@/components/ui/button";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
-  DrawerHeader,
-  DrawerTitle,
-} from "@/components/ui/drawer";
-
-const problemStatements = {
-  aiEducation: {
-    title: "AI & Education (Sponsor Track)",
-    description:
-      "AI-generated educational videos can make learning more scalable and accessible.",
-    details: `Problem: Revolutionizing Student Education with AI-Generated Video Content.
-Creating educational content manually is time-consuming and limits scalability. AI-powered automation could personalize and scale content creation, making education more accessible.
-
-✅ Objective: Develop an AI-driven solution that generates engaging, high-quality educational video content, providing personalized learning experiences across multiple disciplines.
-Note: Those who select the Sponsor problem statement will be eligible for a potential internship and prizes.`,
-  },
-  indiaStack: {
-    title: "India Stack & Digital Innovation",
-    description:
-      "Leverage India's digital transformation to create inclusive solutions.",
-    details: `Problem: Leveraging India's Digital Transformation for Inclusive Innovation.
-India Stack has revolutionized India's digital infrastructure, enabling seamless, paperless, and cashless service delivery.
-
-✅ Objective: Develop solutions using India Stack components (Aadhaar, UPI, DigiLocker, ONDC, etc.) to improve financial inclusion, healthcare, and digital transactions.`,
-  },
-  healthcare: {
-    title: "Healthcare for All",
-    description:
-      "Bringing healthcare to underserved communities through technology.",
-    details: `Problem: Lack of Access to Healthcare in Underserved Communities.
-Many rural areas lack access to basic healthcare services, leading to preventable diseases.
-
-✅ Objective: Develop tech-driven solutions to improve healthcare access in remote areas, aligning with UN SDG 3 (Good Health & Well-being).`,
-  },
-  agritech: {
-    title: "AgriTech & Sustainability",
-    description:
-      "AI-powered farming solutions to boost crop yields and efficiency.",
-    details: `Problem: Harvesting the Future – AI Solutions for Smallholder Farmers.
-Smallholder farmers struggle with low yields and inefficient resource use.
-
-✅ Objective: Design AI-based tools for real-time crop monitoring, pest detection, and resource optimization to support smallholder farmers.`,
-  },
-  openInnovation: {
-    title: "Open Innovation (Wildcard Track)",
-    description:
-      "Innovate freely—solve any problem using technology and creativity.",
-    details: `Problem: Have a unique, groundbreaking idea outside these problem statements?
-This is your chance to innovate freely!
-
-✅ Objective: Solve a pressing issue of your choice using technology and innovation.`,
-  },
-};
-
-function GlowingEffectDemoSecond() {
-  const [selectedProblem, setSelectedProblem] = useState<
-    keyof typeof problemStatements | null
-  >(null);
-
-  return (
-    <>
-      <ul className="grid grid-cols-1 grid-rows-none gap-8 md:grid-cols-12 md:grid-rows-3 lg:gap-4 xl:max-h-[34rem] xl:grid-rows-2">
-        <GridItem
-          area="md:[grid-area:1/1/2/7] xl:[grid-area:1/1/2/5]"
-          icon={<BrainCircuit className="h-4 w-4 text-neutral-400" />}
-          title={problemStatements.aiEducation.title}
-          description={problemStatements.aiEducation.description}
-          onClick={() => setSelectedProblem("aiEducation")}
-        />
-
-        <GridItem
-          area="md:[grid-area:1/7/2/13] xl:[grid-area:2/1/3/5]"
-          icon={<Settings className="h-4 w-4 text-neutral-400" />}
-          title={problemStatements.indiaStack.title}
-          description={problemStatements.indiaStack.description}
-          onClick={() => setSelectedProblem("indiaStack")}
-        />
-
-        <GridItem
-          area="md:[grid-area:2/1/3/7] xl:[grid-area:1/5/3/8]"
-          icon={<Lock className="h-4 w-4 text-neutral-400" />}
-          title={problemStatements.healthcare.title}
-          description={problemStatements.healthcare.description}
-          onClick={() => setSelectedProblem("healthcare")}
-        />
-
-        <GridItem
-          area="md:[grid-area:2/7/3/13] xl:[grid-area:1/8/2/13]"
-          icon={<Sparkles className="h-4 w-4 text-neutral-400" />}
-          title={problemStatements.agritech.title}
-          description={problemStatements.agritech.description}
-          onClick={() => setSelectedProblem("agritech")}
-        />
-
-        <GridItem
-          area="md:[grid-area:3/1/4/13] xl:[grid-area:2/8/3/13]"
-          icon={<Search className="h-4 w-4 text-neutral-400" />}
-          title={problemStatements.openInnovation.title}
-          description={problemStatements.openInnovation.description}
-          onClick={() => setSelectedProblem("openInnovation")}
-        />
-      </ul>
-
-      {/* Drawer for problem details */}
-      {selectedProblem && (
-        <Drawer
-          open={!!selectedProblem}
-          onOpenChange={() => setSelectedProblem(null)}
-        >
-          <DrawerContent>
-            <div className="mx-auto w-full max-w-sm">
-              <DrawerHeader>
-                <DrawerTitle>
-                  {problemStatements[selectedProblem].title}
-                </DrawerTitle>
-                <DrawerDescription>
-                  {problemStatements[selectedProblem].description}
-                </DrawerDescription>
-              </DrawerHeader>
-              <div className="p-4 text-sm text-black">
-                {problemStatements[selectedProblem].details}
-              </div>
-              <DrawerFooter>
-                <Button onClick={() => setSelectedProblem(null)}>Close</Button>
-              </DrawerFooter>
-            </div>
-          </DrawerContent>
-        </Drawer>
-      )}
-    </>
-  );
-}
-
-interface GridItemProps {
-  area: string;
-  icon: React.ReactNode;
-  title: string;
-  description: string;
-  onClick: () => void;
-}
-
-const GridItem = ({
-  area,
-  icon,
-  title,
-  description,
-  onClick,
-}: GridItemProps) => {
-  return (
-    <li className={`min-h-[14rem] list-none ${area}`}>
-      <div
-        className="relative h-full rounded-3xl border p-2  md:p-3 cursor-pointer"
-        onClick={onClick}
-      >
-        <GlowingEffect
-          blur={0}
-          borderWidth={3}
-          spread={80}
-          glow={true}
-          disabled={false}
-          proximity={64}
-          inactiveZone={0.01}
-        />
-        <div className="relative flex h-full flex-col justify-between gap-6 overflow-hidden rounded-xl border-0.75 p-6 dark:shadow-[0px_0px_27px_0px_#2D2D2D] md:p-6">
-          <div className="relative flex flex-1 flex-col justify-between gap-3">
-            <div className="w-fit rounded-lg border border-gray-600 p-2">
-              {icon}
-            </div>
-            <div className="space-y-">
-              <h3 className="pt-0.5 text-xl font-semibold text-white">
-                {title}
-              </h3>
-              <p className="text-sm text-neutral-400">{description}</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </li>
-  );
-};
-
-const ProblemState_NOT = () => {
-  return (
-    <div className="w-screen h-auto my-5 flex flex-col justify-center items-center gap-8 bg-white">
-      <div className="w-[90vw] sm:w-[70vw] min-h-48 bg-[#f3f5f7] rounded-xl flex flex-col p-8">
-        <h1 className="text-black text-2xl font-bold">
-          🤖 AI & Education (Sponsor Track)
-        </h1>
-        <ul className="list-disc text-[#363636] pl-4 list-inside">
-          <li className="my-4">
-            <b>Problem:</b> Revolutionizing Student Education with AI-Generated Video
-            Content Creating educational content manually is time-consuming and
-            limits scalability. AI-powered automation could personalize and
-            scale content creation, making education more accessible.
-          </li>
-          <li className="my-2">
-          ✅ <b>Objective:</b> Develop an AI-driven solution that generates engaging, high-quality educational video content, providing personalized learning experiences across multiple disciplines.
-          Note: Those who select the Sponsor problem statement will be eligible for a potential internship, and if their solution is good enough, they are eligible to earn an additional prize.
-          </li>
-        </ul>
-      </div>
-
-
-      <div className="w-[90vw] sm:w-[70vw] min-h-48 bg-[#f3f5f7] rounded-xl flex flex-col p-8">
-        <h1 className="text-black text-2xl font-bold">
-        🌐 India Stack
-        </h1>
-        <ul className="list-disc text-[#363636] pl-4 list-inside">
-          <li className="my-4">
-            <b>Problem:</b> Leveraging India's Digital Transformation for Inclusive Innovation
-            India Stack, a comprehensive suite of open APIs, has revolutionized India's digital infrastructure, enabling seamless, presence-less, paperless, and cashless service delivery.
-          </li>
-          <li className="my-2">
-          ✅ <b>Objective:</b> Develop solutions that leverage both established and emerging components of India Stack—including Aadhaar, eKYC, UPI, DigiLocker, eSign, Bharat Bill Payment System, BharatQR, UMANG, Open Credit Enablement Network (OCEN), Open Network for Digital Commerce (ONDC), Ayushman Bharat Digital Mission, DigiYatra, and Government e Marketplace (GeM)—to address real-world challenges. Participants are encouraged to create applications that enhance financial inclusion, streamline digital identity verification, improve healthcare delivery, and promote secure, efficient digital transactions, thereby contributing to India's digital transformation.
-          </li>
-        </ul>
-      </div>
-
-
-
-      <div className="w-[90vw] sm:w-[70vw] min-h-48 bg-[#f3f5f7] rounded-xl flex flex-col p-8">
-        <h1 className="text-black text-2xl font-bold">
-        🌍 Healthcare for All
-        </h1>
-        <ul className="list-disc text-[#363636] pl-4 list-inside">
-          <li className="my-4">
-            <b>Problem:</b> Lack of Access to Healthcare in Underserved Communities
-            Many rural and remote communities lack access to basic healthcare services, leading to preventable diseases and reduced quality of life. Barriers include poor infrastructure, medical professional shortages, and limited awareness of preventive care.
-          </li>
-          <li className="my-2">
-          ✅ <b>Objective:</b>  Develop scalable, sustainable, and tech-driven solutions to improve healthcare access in underserved areas. Your solution should align with UN SDG 3: Good Health and Well-being.
-
-          </li>
-        </ul>
-      </div>
-
-
-
-      <div className="w-[90vw] sm:w-[70vw] min-h-48 bg-[#f3f5f7] rounded-xl flex flex-col p-8">
-        <h1 className="text-black text-2xl font-bold">
-        🌾 AgriTech & Sustainability
-        </h1>
-        <ul className="list-disc text-[#363636] pl-4 list-inside">
-          <li className="my-4">
-            <b>Problem:</b> Harvesting the Future – AI Solutions for Smallholder Farmers
-            Smallholder farmers lack access to advanced agricultural technologies, leading to low crop yields, inefficient resource use, and climate vulnerability. With AI-powered solutions, farmers can make better decisions and improve productivity.
-          </li>
-          <li className="my-2">
-          ✅ <b>Objective:</b>  Design an AI-based system that assists farmers with real-time crop monitoring, pest detection, and resource optimization, ensuring affordable and scalable solutions for developing regions.
-
-          </li>
-        </ul>
-      </div>
-
-
-      <div className="w-[90vw] sm:w-[70vw] min-h-48 bg-[#f3f5f7] rounded-xl flex flex-col p-8">
-        <h1 className="text-black text-2xl font-bold">
-        🎓 AI for Academic Excellence
-        </h1>
-        <ul className="list-disc text-[#363636] pl-4 list-inside">
-          <li className="my-4">
-            <b>Problem:</b> Students often struggle with keeping track of tasks, setting clear goals, and organizing study content, making regular revision and preparation overwhelming.
-          </li>
-          <li className="my-2">
-          ✅ <b>Objective:</b>   Develop an AI-powered solution that streamlines task tracking, goal management, and content organization for students, enhancing their ability to prepare and revise effectively.
-
-          </li>
-        </ul>
-      </div>
-
-
-      <div className="w-[90vw] sm:w-[70vw] min-h-48 bg-[#f3f5f7] rounded-xl flex flex-col p-8">
-        <h1 className="text-black text-2xl font-bold">
-        🎓 AI for Academic Excellence
-        </h1>
-        <ul className="list-disc text-[#363636] pl-4 list-inside">
-          <li className="my-4">
-            <b>Problem:</b> Students often struggle with keeping track of tasks, setting clear goals, and organizing study content, making regular revision and preparation overwhelming.
-          </li>
-          <li className="my-2">
-          ✅ <b>Objective:</b>   Develop an AI-powered solution that streamlines task tracking, goal management, and content organization for students, enhancing their ability to prepare and revise effectively.
-
-          </li>
-        </ul>
-      </div>
-
-
-    </div>
-  );
-};
 
 
 const ProblemState = () => {
   return (
-    <div className="w-full h-auto my-5 flex flex-col ">
-      <div className=" backdrop-blur-[50px] w-full h-full  rounded-[20px] md:rounded-[40px] px-16 py-4 border-solid border-white/20 border-[2px]  bg-white/5 flex flex-col justify-between items-center">
+    <div className="w-full h-auto mb-6 flex flex-col ">
+      <div className=" backdrop-blur-[50px] w-full h-full  rounded-[20px] md:rounded-[40px] px-4 md:px-16 py-4 border-solid border-white/20 border-[2px]  bg-white/5 flex flex-col justify-between items-center">
 
-      <div className="w-full h-full py-6 mb-4 border-b-2 border-gray-200 ">
+      <div className="w-full h-full py-6 mb-4 border-b-2 border-gray-100 ">
        <h1 className="text-white text-2xl font-bold">
        🤖 AI & Education (Sponsor Track)
         </h1>
@@ -328,11 +29,11 @@ const ProblemState = () => {
         </h1>
         <ul className="list-disc text-gray-200 pl-4 list-inside">
           <li className="my-4">
-            <b>Problem:</b> Leveraging India's Digital Transformation for Inclusive Innovation
-            India Stack, a comprehensive suite of open APIs, has revolutionized India's digital infrastructure, enabling seamless, presence-less, paperless, and cashless service delivery.
+            <b>Problem:</b> Leveraging India&#39;s Digital Transformation for Inclusive Innovation
+            India Stack, a comprehensive suite of open APIs, has revolutionized India&#39;s digital infrastructure, enabling seamless, presence-less, paperless, and cashless service delivery.
           </li>
           <li className="my-2">
-          ✅ <b>Objective:</b>   Develop solutions that leverage both established and emerging components of India Stack—including Aadhaar, eKYC, UPI, DigiLocker, eSign, Bharat Bill Payment System, BharatQR, UMANG, Open Credit Enablement Network (OCEN), Open Network for Digital Commerce (ONDC), Ayushman Bharat Digital Mission, DigiYatra, and Government e Marketplace (GeM)—to address real-world challenges. Participants are encouraged to create applications that enhance financial inclusion, streamline digital identity verification, improve healthcare delivery, and promote secure, efficient digital transactions, thereby contributing to India's digital transformation.
+          ✅ <b>Objective:</b>   Develop solutions that leverage both established and emerging components of India Stack—including Aadhaar, eKYC, UPI, DigiLocker, eSign, Bharat Bill Payment System, BharatQR, UMANG, Open Credit Enablement Network (OCEN), Open Network for Digital Commerce (ONDC), Ayushman Bharat Digital Mission, DigiYatra, and Government e Marketplace (GeM)—to address real-world challenges. Participants are encouraged to create applications that enhance financial inclusion, streamline digital identity verification, improve healthcare delivery, and promote secure, efficient digital transactions, thereby contributing to India&#39;s digital transformation.
           </li>
         </ul>
       </div>
@@ -462,4 +163,49 @@ const ProblemState = () => {
 }
 
 
-export { GlowingEffectDemoSecond, ProblemState };
+const AboutUs = () => {
+  return (
+    <div className="w-full h-auto  mb-14 flex flex-col ">
+      <div className=" backdrop-blur-[50px] w-full h-full  rounded-[20px] md:rounded-[40px] px-4 md:px-16 py-4 border-solid border-white/20 border-[2px]  bg-white/5 flex flex-col justify-between items-center">
+
+
+      <div className="w-full h-full pt-6 mb-0  ">
+       <h1 className="text-white text-2xl sm:text-2xl font-bold">
+       🚀 Cepheus 2025 🌌
+        </h1>
+        <p className="list-disc text-gray-200 pl-2 md:pl-4 list-inside my-4">
+        Welcome to <b>Cepheus 2025, a 24-hour Hackathon</b> where innovation, creativity, and collaboration take center stage!
+        This hackathon is a beacon for developers, designers, and problem-solvers looking to push the boundaries of technology and create groundbreaking solutions.
+        </p>
+      </div>
+
+
+      <div className="w-full h-full py-6 mb-4 ">
+       <h1 className="text-white text-2xl sm:text-2xl font-bold">
+       📅 Event Details
+        </h1>
+        <ul className="list-disc text-gray-200 pl-4 list-inside">
+          <li className="my-4">
+            <b>Date:</b>
+            April 10-11, 2025
+          </li>
+          <li className="my-4">
+           <b>Location:</b> AIT Campus
+          </li>
+
+          <li className="my-2">
+          <b>Hosted by:</b> GDG on Campus AIT & Code Club
+          </li>
+        </ul>
+        <p className=" text-gray-200 pl-4 list-inside my-4">Cepheus provides a platform to innovate, learn, and connect with industry leaders, mentors, and fellow tech enthusiasts.
+        Whether you’re a seasoned hacker or a first-time participant, this is your chance to turn ideas into reality!</p>
+      </div>
+
+
+      </div>
+    </div>
+  )
+}
+
+
+export {  ProblemState, AboutUs };

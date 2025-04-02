@@ -7,14 +7,12 @@ import Menu from "@/components/navMob/Menu";
 
 import { FlipWords } from "@/components/ui/flip-words";
 import Rbtn from "@/components/registerBtn/btn";
-import { ProblemState } from "@/components/problemStatement/ps";
+import { AboutUs, ProblemState } from "@/components/problemStatement/ps";
 import Countdown from "@/components/counter/Counter";
 
-import {HackathonFAQ} from "@/components/faqs/faqs"
-
+import { HackathonFAQ } from "@/components/faqs/faqs";
 
 import Footer from "@/components/footer/footer";
-import MDXRenderer from "@/components/MDX/mdx_preview";
 
 export default function Home() {
   const words = [
@@ -67,7 +65,7 @@ export default function Home() {
             <div className=" text-xs md:text-sm mb-4  text-white/60 ">
               In sponsorship with
             </div>
-            <div className="flex flex-row items-center justify-center gap-6">
+            <div className="flex flex-row items-center justify-center gap-4 md:gap-12">
               <ImageH
                 src="/Devfolio_Logo-White.svg"
                 alt="DEVFOLIO LOGO"
@@ -84,33 +82,56 @@ export default function Home() {
                 className="md:w-[100px] md:h-[50px]"
                 href="https://ethindia.co"
               />
+              <a href="https://zoodleme.com/" className=" text-white font-bold text-base md:text-lg" >ZoodleMe</a>
+              <p className=" text-white  text-base md:text-lg font-serif" ><b>VR</b> Prints</p>
             </div>
           </div>
-
-
         </div>
-
-
-
       </div>
 
-      <section id="counter" className="w-screen h-auto py-8 flex  flex-col items-center justify-center text-black bg-[linear-gradient(180deg,var(--gradient-background-start),var(--gradient-background-end))]">
-      <div className="">
-      <Countdown targetDate="2025-04-10T23:59:59" />
+      <section
+        id="counter"
+        className="w-screen h-auto py-10 flex  flex-col items-center justify-center text-black bg-[linear-gradient(180deg,var(--gradient-background-start),var(--gradient-background-end))]"
+      >
+        <div className="">
+          <Countdown targetDate="2025-04-10T23:59:59" />
         </div>
-    </section>
-    {/* <div className="w-screen h-[2px] bg-[#e0e0e0]"></div> */}
-    
-    <div id="s" className="w-screen h-auto  flex px-6 md:px-20 lg:px-40 flex-col items-center justify-center  text-white">
-      <ProblemState ></ProblemState>
-    </div>
-        
-    <section id="FAQs" className="w-screen h-auto  flex px-6 md:px-20 lg:px-40 flex-col items-center justify-center  text-white">
-    <h1 className=" text-white  py-12 text-2xl  md:text-4xl font-semibold">🙋 FAQs</h1>
-    
-      <HackathonFAQ />
-    </section>
-      <footer id="aboutus" className=" mt-8">
+      </section>
+      {/* <div className="w-screen h-[2px] bg-[#e0e0e0]"></div> */}
+
+      <div
+        id="aboutus"
+        className="w-screen h-auto mt-8 flex px-3 md:px-20 lg:px-40 flex-col items-center justify-center  text-white"
+      >
+        <h1 className="text-2xl mb-4 md:text-3xl font-bold bg-gradient-to-r from-white via-yellow-100 to-gray-400 bg-clip-text text-transparent animate-gradient">
+          About Us
+        </h1>
+        <AboutUs></AboutUs>
+      </div>
+
+
+      <div
+        id="statement"
+        className="w-screen h-auto mt-8 flex px-3 md:px-20 lg:px-40 flex-col items-center justify-center  text-white"
+      >
+        <h1 className="text-2xl mb-4 md:text-3xl font-bold bg-gradient-to-r from-white via-yellow-100 to-gray-400 bg-clip-text text-transparent animate-gradient">
+          ✏️ Detailed Problem Statements
+        </h1>
+        <ProblemState></ProblemState>
+      </div>x
+
+      <section
+        id="FAQs"
+        className="w-screen h-auto  flex px-6 md:px-20 lg:px-40 flex-col items-center justify-center  text-white"
+      >
+        <h1 className="text-2xl my-12 md:text-3xl font-bold bg-gradient-to-r from-white via-yellow-100 to-gray-400 bg-clip-text text-transparent animate-gradient">
+          FAQs
+        </h1>
+
+        <HackathonFAQ />
+      </section>
+
+      <footer id="aboutus" className=" mt-20">
         <Footer />
       </footer>
     </main>
