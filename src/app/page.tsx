@@ -65,7 +65,8 @@ export default function Home() {
             <div className=" text-xs md:text-sm mb-4  text-white/60 ">
               In sponsorship with
             </div>
-            <div className="flex flex-row items-center justify-center gap-4 md:gap-12">
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-12">
+              <div className="flex flex-row items-center justify-center gap-4 md:gap-12">
               <ImageH
                 src="/Devfolio_Logo-White.svg"
                 alt="DEVFOLIO LOGO"
@@ -83,7 +84,12 @@ export default function Home() {
                 href="https://ethindia.co"
               />
               <a href="https://zoodleme.com/" className=" text-white font-bold text-base md:text-lg" >ZoodleMe</a>
+              </div>
+              <div className="flex flex-row items-center justify-center gap-4 md:gap-12">
               <p className=" text-white  text-base md:text-lg font-serif" ><b>VR</b> Prints</p>
+              
+              <a href="https://internshipgate.com" className=" text-white text-base md:text-lg" >Internship<b>Gate</b></a>
+              </div>
             </div>
           </div>
         </div>
